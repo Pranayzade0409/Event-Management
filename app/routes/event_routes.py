@@ -20,6 +20,11 @@ def CheckHealth():
     }
 
 
+@event_router.get("/about")
+def checkAbout():
+    return {"message": "Learning Github"}
+
+
 @event_router.post("/add-event", response_model= event_schema.EventResponse)
 def AddEvent(
     data: event_schema.Eventcreate,
